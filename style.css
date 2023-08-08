@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wallpaper {
+    width: fit-content;
+    position: absolute;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    
+}
+.grid-container {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: auto;
+    margin: 100px;
+    
+}
+
+.first-box {
+    
+    grid-column: 1 / 3;
+}
+.first-box > h1 {
+    color:  hsl(300, 43%, 22%);
+    font-weight: 900;
+    font-size: 3em;
+    margin-bottom: 25px;
+    
+}
+.first-box > p {
+    color:  hsl(303, 10%, 53%);
+    
+}
+.second-box {
+    
+   grid-column: span 2;
+   
+}
+.rated-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color:  hsl(300, 43%, 22%);
+    background-color: hsl(300, 24%, 96%);
+    font-weight: bolder;
+    gap: 10px;
+    padding: 20px;
+}
+.star1 {
+    width: fit-content;
+    align-self: flex-start;
+}
+.star2 {
+    width: fit-content;
+    align-self: center;
+}
+.star3 {
+    width: fit-content;
+    align-self: flex-end;
+}
+.boxes {
+    display: flex;
+    align-items: center;
+}
+.box {
+    width: 250px;
+    height: 150px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+.image-box {
+    display: flex;
+    
+    gap: 10px;
+}
+.image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.name {
+    display: flex;
+    flex-direction: column;
+}
+.subname {
+    color: hsl(333, 80%, 67%);
+    font-weight: lighter;
+}
+.third {
+    display: flex;
+    justify-self: start;
+    align-self: start;
+}
+.fourth {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-column: span 2;
+}
+.fifth {
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+    grid-column-start: -2;
+}
+@media (max-width: 700px) {
+   
+    
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rated {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    
+    .first-box {
+        text-align: center;
+        grid-area: first-box;
+    }
+    .second-box {
+        grid-area: second-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .third {
+        grid-area: third;
+    }
+    .fourth {
+        grid-area: fourth;
+    }
+    .fifth{
+        grid-area: fifth;
+    }
+    
+    .grid-container {
+        
+        display: grid;
+        grid-template:
+        "first-box" 
+        "second-box"
+        "third" 
+        "fourth" 
+        "fifth";
+    }
+}
